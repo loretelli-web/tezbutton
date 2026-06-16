@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7d5c79">
+<title>TEZ Button — Regulación emocional inmediata</title>
+<meta name="description" content="Una familia de herramientas digitales de regulación emocional para los momentos en que más lo necesitás. Basadas en el Método T.E.Z.® de Lorena Restelli.">
+<meta property="og:title" content="TEZ Button — Regulación emocional inmediata">
+<meta property="og:description" content="Herramientas digitales de regulación emocional para cada momento. Método T.E.Z.®.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tezbutton.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body { font-family: 'Poppins', sans-serif; background: #F5F2EE; color: #2C2C2C; line-height: 1.6; }
+  .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero { text-align: center; padding: 70px 24px 50px; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: #7d5c79; font-weight: 600; margin-bottom: 20px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 46px; line-height: 1.15; color: #2C2C2C; margin-bottom: 20px; }
+  .hero h1 em { font-style: italic; color: #7d5c79; }
+  .hero-sub { font-size: 17px; font-weight: 300; color: #5A5A5A; max-width: 560px; margin: 0 auto 14px; }
+  .hero-method { font-size: 14px; color: #7d5c79; font-weight: 500; margin-top: 24px; letter-spacing: .03em; }
+
+  /* INTRO */
+  .intro { background: #FAFAF8; padding: 54px 24px; text-align: center; }
+  .intro h2 { font-family: 'Playfair Display', serif; font-size: 28px; color: #2C2C2C; margin-bottom: 18px; font-style: italic; }
+  .intro p { font-size: 16px; font-weight: 300; color: #5A5A5A; max-width: 640px; margin: 0 auto 14px; }
+
+  /* GRID */
+  .botones { padding: 64px 24px; }
+  .botones-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 30px; margin-bottom: 12px; color: #2C2C2C; }
+  .botones-subtitle { text-align: center; font-size: 15px; font-weight: 300; color: #5A5A5A; margin-bottom: 48px; max-width: 540px; margin-left: auto; margin-right: auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+  .card { background: #FAFAF8; border-radius: 20px; padding: 32px 26px; text-align: center; border: 1px solid #EDE8E0; transition: transform .2s, box-shadow .2s; display: flex; flex-direction: column; align-items: center; }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,.08); }
+  .card-dot { width: 56px; height: 56px; border-radius: 50%; margin-bottom: 18px; display: flex; align-items: center; justify-content: center; font-size: 26px; }
+  .card h3 { font-family: 'Playfair Display', serif; font-size: 22px; margin-bottom: 8px; }
+  .card-tagline { font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; margin-bottom: 14px; }
+  .card p { font-size: 14px; font-weight: 300; color: #5A5A5A; margin-bottom: 22px; flex-grow: 1; }
+  .card a { display: inline-block; padding: 12px 28px; border-radius: 12px; color: white; text-decoration: none; font-size: 14px; font-weight: 500; transition: opacity .2s; width: 100%; }
+  .card a:hover { opacity: .88; }
+
+  /* Colores por botón */
+  .azul .card-dot { background: #D6E8F7; } .azul h3, .azul .card-tagline { color: #1E4D7B; } .azul a { background: #3A6EA5; }
+  .rosa .card-dot { background: #FCE4EB; } .rosa h3, .rosa .card-tagline { color: #8B2A42; } .rosa a { background: #D45C7A; }
+  .verde .card-dot { background: #D4EDE0; } .verde h3, .verde .card-tagline { color: #1A4D30; } .verde a { background: #2E7D52; }
+  .naranja .card-dot { background: #FDEBD0; } .naranja h3, .naranja .card-tagline { color: #7A3800; } .naranja a { background: #E07020; }
+  .malva .card-dot { background: #ede0ec; } .malva h3, .malva .card-tagline { color: #7d5c79; } .malva a { background: #7d5c79; }
+  .acero .card-dot { background: #DCE3E8; } .acero h3, .acero .card-tagline { color: #2A3744; } .acero a { background: #3D4D5C; }
+
+  /* CÓMO FUNCIONA */
+  .como { background: #FAFAF8; padding: 60px 24px; }
+  .como h2 { text-align: center; font-family: 'Playfair Display', serif; font-size: 30px; margin-bottom: 44px; color: #2C2C2C; }
+  .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; max-width: 860px; margin: 0 auto; }
+  .paso { text-align: center; }
+  .paso-num { width: 44px; height: 44px; border-radius: 50%; background: #7d5c79; color: white; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 600; margin: 0 auto 16px; font-family: 'Playfair Display', serif; }
+  .paso h4 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
+  .paso p { font-size: 14px; font-weight: 300; color: #5A5A5A; }
+
+  /* AUTORA */
+  .autora { padding: 60px 24px; text-align: center; }
+  .autora h2 { font-family: 'Playfair Display', serif; font-size: 26px; font-style: italic; margin-bottom: 18px; color: #7d5c79; }
+  .autora p { font-size: 16px; font-weight: 300; color: #5A5A5A; max-width: 620px; margin: 0 auto 14px; }
+
+  /* FOOTER */
+  footer { background: #2C2C2C; color: #BBB; text-align: center; padding: 40px 24px; font-size: 13px; font-weight: 300; }
+  footer .footer-brand { font-family: 'Playfair Display', serif; font-size: 20px; color: white; margin-bottom: 10px; }
+  footer a { color: #C9A8C5; text-decoration: none; }
+  .disclaimer { margin-top: 16px; font-size: 11px; opacity: .6; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 34px; }
+    .hero { padding: 50px 24px 40px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <p class="hero-eyebrow">Método T.E.Z.®</p>
+      <h1>Para los momentos<br>en que <em>más lo necesitás.</em></h1>
+      <p class="hero-sub">TEZ Button es una familia de herramientas digitales de regulación emocional inmediata. Para cuando el cuerpo se desborda y necesitás algo concreto, ahora.</p>
+      <p class="hero-method">Distintos caminos. Un mismo propósito: acompañarte.</p>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <div class="intro">
+    <div class="container">
+      <h2>No es meditación. Es intervención.</h2>
+      <p>Cuando estás al límite no tenés tiempo de leer un libro ni ver un video. Entrás, escribís cómo te sentís, y en menos de tres minutos recibís un ejercicio concreto para hacer en ese mismo momento. Con música que acompaña. Adaptado a lo que estás viviendo.</p>
+      <p>Cada botón está diseñado para una realidad distinta, con su propio lenguaje y sus propios ejercicios, basados en el Método T.E.Z.®.</p>
+    </div>
+  </div>
+
+  <!-- BOTONES -->
+  <div class="botones">
+    <div class="container">
+      <h2 class="botones-title">La familia de botones</h2>
+      <p class="botones-subtitle">Elegí el que habla de tu momento.</p>
+      <div class="grid">
+
+        <div class="card azul">
+          <div class="card-dot">💙</div>
+          <h3>Botón Azul</h3>
+          <div class="card-tagline">Tu lugar seguro</div>
+          <p>Para mamás, papás, cuidadores y familias de personas con TEA. Para el colapso que llega después de la crisis.</p>
+          <a href="https://boton-azul-3vwf.vercel.app" target="_blank">Abrir Botón Azul</a>
+        </div>
+
+        <div class="card rosa">
+          <div class="card-dot">🌸</div>
+          <h3>Botón Rosa</h3>
+          <div class="card-tagline">Contención y acompañamiento</div>
+          <p>Para mujeres atravesando un tratamiento oncológico. Para el miedo, la culpa y la soledad que nadie más atiende.</p>
+          <a href="https://boton-rosa.vercel.app" target="_blank">Abrir Botón Rosa</a>
+        </div>
+
+        <div class="card verde">
+          <div class="card-dot">💚</div>
+          <h3>Botón Verde</h3>
+          <div class="card-tagline">Claridad y bienestar</div>
+          <p>Para quienes trabajan al límite de la exigencia. Para resetear y recuperar el foco cuando todo aprieta.</p>
+          <a href="https://boton-verde-qfog.vercel.app" target="_blank">Abrir Botón Verde</a>
+        </div>
+
+        <div class="card naranja">
+          <div class="card-dot">🧡</div>
+          <h3>Botón Naranja</h3>
+          <div class="card-tagline">Pausa y presencia</div>
+          <p>Para docentes que sostienen el aula. Para esos diez minutos de recreo en que necesitás volver a vos antes de volver a entrar.</p>
+          <a href="https://boton-naranja.vercel.app" target="_blank">Abrir Botón Naranja</a>
+        </div>
+
+        <div class="card malva">
+          <div class="card-dot">🌿</div>
+          <h3>Botón Malva</h3>
+          <div class="card-tagline">Reconocerse y re-habitarse</div>
+          <p>Para la mujer que funciona por fuera pero no se reconoce por dentro. El corazón del Método T.E.Z.®.</p>
+          <a href="https://boton-malva.vercel.app" target="_blank">Abrir Botón Malva</a>
+        </div>
+
+        <div class="card acero">
+          <div class="card-dot">⚙️</div>
+          <h3>Botón Acero</h3>
+          <div class="card-tagline">Control y foco</div>
+          <p>Para hombres bajo presión. Herramientas concretas y directas para recuperar el control en los momentos de tensión.</p>
+          <a href="https://boton-acero.vercel.app" target="_blank">Abrir Botón Acero</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- CÓMO FUNCIONA -->
+  <div class="como">
+    <div class="container">
+      <h2>Cómo funciona</h2>
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-num">1</div>
+          <h4>Elegí tu botón</h4>
+          <p>El que habla de tu situación y tu momento.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">2</div>
+          <h4>Contá qué pasa</h4>
+          <p>Escribí cómo te sentís, o elegí entre las opciones. No tiene que estar ordenado.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">3</div>
+          <h4>Recibí tu ejercicio</h4>
+          <p>En menos de tres minutos, una herramienta concreta para hacer ahora.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">4</div>
+          <h4>Volvé cuando lo necesites</h4>
+          <p>Disponible siempre, en tu celular, sin instalar nada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUTORA -->
+  <div class="autora">
+    <div class="container">
+      <h2>Detrás de TEZ Button</h2>
+      <p>Soy Lorena Restelli, creadora del Método T.E.Z.® (Transformación Esencial Zen) y de Zen Femenino. Después de años acompañando a personas al borde del agotamiento —y de atravesar yo misma experiencias que me marcaron— convertí mi método en una herramienta de bolsillo, para que esté ahí en el momento exacto en que se necesita.</p>
+      <p>Cada botón nació de una historia real. Cada ejercicio, de una metodología probada.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">TEZ Button</div>
+    <p>Una creación de Lorena Restelli · Método T.E.Z.®</p>
+    <p style="margin-top:8px;"><a href="https://zenfemenino.com" target="_blank">zenfemenino.com</a></p>
+    <p class="disclaimer">TEZ Button ofrece herramientas de bienestar y autorregulación emocional. No reemplaza la atención médica, psicológica ni psiquiátrica profesional. Si atravesás una crisis, buscá ayuda profesional.</p>
+  </footer>
+
+</body>
+</html>
