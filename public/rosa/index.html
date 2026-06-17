@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#D45C7A">
+<title>Botón Rosa — Para mujeres en tratamiento oncológico</title>
+<meta name="description" content="Un espacio de contención y regulación emocional para mujeres que atraviesan un tratamiento oncológico. Para el miedo, la culpa y la soledad que nadie más atiende.">
+<meta property="og:title" content="Botón Rosa — Contención. Fuerza. Acompañamiento.">
+<meta property="og:description" content="Regulación emocional para mujeres en tratamiento oncológico. 3 ejercicios gratis.">
+<meta property="og:image" content="https://tezbutton.com/logor.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body { font-family: 'Poppins', sans-serif; background: #FDF0F3; color: #2C2C2C; line-height: 1.7; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  .hero { text-align: center; padding: 64px 24px 48px; background: linear-gradient(180deg, #FCE4EB 0%, #FDF0F3 100%); }
+  .hero-badge { display: inline-block; background: #FCE4EB; color: #8B2A42; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 20px; letter-spacing: .04em; margin-bottom: 24px; border: 1px solid #F0C0CC; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 40px; line-height: 1.18; margin-bottom: 18px; }
+  .hero h1 em { font-style: italic; color: #D45C7A; }
+  .hero-sub { font-size: 17px; font-weight: 300; color: #5A4048; max-width: 540px; margin: 0 auto 30px; }
+  .btn-primary { display: inline-block; background: #D45C7A; color: white; text-decoration: none; padding: 16px 40px; border-radius: 14px; font-size: 16px; font-weight: 500; transition: background .2s; }
+  .btn-primary:hover { background: #8B2A42; }
+  .hero-free { font-size: 13px; color: #B06B7E; margin-top: 14px; font-weight: 300; }
+
+  section { padding: 56px 24px; }
+  .section-alt { background: #FFF7F9; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 29px; text-align: center; margin-bottom: 16px; }
+  h2 em { font-style: italic; color: #D45C7A; }
+  .lead { font-size: 16px; font-weight: 300; color: #5A4048; text-align: center; max-width: 600px; margin: 0 auto 14px; }
+
+  .tres { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 600px; margin: 32px auto 0; }
+  .tres-item { text-align: center; padding: 24px 14px; background: #FFF7F9; border-radius: 16px; border: 1px solid #F5D5DD; }
+  .tres-item .emoji { font-size: 26px; display: block; margin-bottom: 8px; }
+  .tres-item h4 { font-family: 'Playfair Display', serif; font-size: 18px; color: #8B2A42; font-style: italic; }
+
+  .historia { background: #FFF7F9; border-left: 3px solid #D45C7A; padding: 28px 30px; border-radius: 12px; margin: 28px auto 0; max-width: 600px; text-align: center; }
+  .historia p { font-size: 16px; font-weight: 300; color: #3A3A3A; font-style: italic; margin-bottom: 16px; }
+  .historia a { display: inline-block; margin-top: 6px; color: #D45C7A; text-decoration: none; font-weight: 500; font-style: normal; font-size: 15px; border-bottom: 1px solid #E8A0B0; padding-bottom: 2px; }
+
+  .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; max-width: 640px; margin: 36px auto 0; }
+  .paso { text-align: center; }
+  .paso-num { width: 42px; height: 42px; border-radius: 50%; background: #D45C7A; color: white; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 600; margin: 0 auto 14px; font-family: 'Playfair Display', serif; }
+  .paso h4 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+  .paso p { font-size: 13px; font-weight: 300; color: #5A4048; }
+
+  .precio-card { background: white; border: 2px solid #D45C7A; border-radius: 24px; padding: 40px 32px; max-width: 420px; margin: 0 auto; text-align: center; }
+  .precio-amount { font-size: 44px; font-weight: 600; color: #D45C7A; font-family: 'Playfair Display', serif; }
+  .precio-amount span { font-size: 16px; font-weight: 300; color: #5A4048; }
+  .precio-free { background: #FCE4EB; color: #8B2A42; font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: 12px; display: inline-block; margin: 18px 0 24px; }
+  .precio-list { list-style: none; text-align: left; margin-bottom: 28px; }
+  .precio-list li { font-size: 14px; font-weight: 300; color: #3A3A3A; padding: 8px 0; padding-left: 28px; position: relative; }
+  .precio-list li::before { content: "✓"; position: absolute; left: 0; color: #D45C7A; font-weight: 600; }
+  .btn-pay { display: block; width: 100%; background: #D45C7A; color: white; text-decoration: none; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 500; transition: background .2s; }
+  .btn-pay:hover { background: #8B2A42; }
+  .precio-note { font-size: 12px; color: #B09098; margin-top: 14px; font-weight: 300; }
+
+  footer { background: #2C2C2C; color: #BBB; text-align: center; padding: 36px 24px; font-size: 13px; font-weight: 300; margin-top: 20px; }
+  footer .fb { font-family: 'Playfair Display', serif; font-size: 18px; color: white; margin-bottom: 8px; }
+  footer a { color: #E8A0B0; text-decoration: none; }
+  .disclaimer { font-size: 11px; opacity: .55; max-width: 480px; margin: 14px auto 0; }
+
+  @media (max-width: 600px) { .hero h1 { font-size: 31px; } .tres { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="container">
+      <span class="hero-badge">🌸 Para mujeres en tratamiento oncológico</span>
+      <h1>Acá no tenés que<br><em>ser fuerte.</em></h1>
+      <p class="hero-sub">Botón Rosa es un espacio de contención para los momentos en que el miedo, la culpa o la soledad pesan demasiado. No para resolver. Para acompañarte.</p>
+      <a href="https://boton-rosa.vercel.app" class="btn-primary" target="_blank">Entrar a mi espacio</a>
+      <p class="hero-free">3 momentos gratis · Sin instalar nada</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="container">
+      <h2>Lo que <em>nadie más atiende</em></h2>
+      <p class="lead">El sistema médico cuida tu cuerpo. Pero hay algo que queda afuera de toda consulta:</p>
+      <div class="tres">
+        <div class="tres-item"><span class="emoji">🌫️</span><h4>El miedo</h4></div>
+        <div class="tres-item"><span class="emoji">💭</span><h4>La culpa</h4></div>
+        <div class="tres-item"><span class="emoji">🤍</span><h4>La soledad</h4></div>
+      </div>
+      <p class="lead" style="margin-top:28px;">Botón Rosa existe para eso. Para lo que sentís cuando se apagan las luces del hospital y quedás sola con todo lo que no se puede decir en voz alta.</p>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <h2>Creado desde <em>un lugar que conozco</em></h2>
+      <div class="historia">
+        <p>"Sé lo que es atravesar esto. El miedo a lo que no sabés, la culpa que aparece sin permiso, la sensación de que nadie entiende del todo lo que estás viviendo. Botón Rosa nació de ahí: de querer ofrecer la contención que a mí me hubiera gustado tener a mano, en el momento exacto."</p>
+        <a href="https://zenfemenino.com/transformacion-esencial-zen-sanacion" target="_blank">Conocé mi historia →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Cómo funciona</h2>
+      <div class="pasos">
+        <div class="paso"><div class="paso-num">1</div><h4>Contá cómo estás</h4><p>Escribí lo que sentís o elegí entre las opciones.</p></div>
+        <div class="paso"><div class="paso-num">2</div><h4>Recibí tu momento</h4><p>Un ejercicio suave, pensado para tu cuerpo y tu estado.</p></div>
+        <div class="paso"><div class="paso-num">3</div><h4>Respirá</h4><p>Con música que acompaña, a tu ritmo, sin exigencias.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container">
+      <h2>Empezá hoy</h2>
+      <div class="precio-card">
+        <div class="precio-amount">USD 9,99<span>/mes</span></div>
+        <div class="precio-free">Probá con 3 momentos gratis</div>
+        <ul class="precio-list">
+          <li>Ejercicios ilimitados, cuando los necesites</li>
+          <li>Suaves y adaptados a tu estado</li>
+          <li>Música que acompaña cada pausa</li>
+          <li>En tu celular, sin instalar nada</li>
+          <li>Cancelás cuando quieras</li>
+        </ul>
+        <a href="https://boton-rosa.vercel.app" class="btn-pay" target="_blank">Comenzar ahora</a>
+        <p class="precio-note">Probás gratis antes de pagar. Sin compromiso.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fb">Botón Rosa</div>
+    <p>Parte de la familia TEZ Button · Método T.E.Z.®</p>
+    <p style="margin-top:8px;"><a href="https://tezbutton.com">tezbutton.com</a></p>
+    <p style="margin-top:14px; font-size:13px;">
+      <a href="https://tezbutton.com/terminos.html" style="color:#E8A0B0; margin:0 6px;">Términos y Condiciones</a> ·
+      <a href="https://tezbutton.com/privacidad.html" style="color:#E8A0B0; margin:0 6px;">Privacidad</a> ·
+      <a href="https://tezbutton.com/reembolsos.html" style="color:#E8A0B0; margin:0 6px;">Reembolsos</a>
+    </p>
+    <p class="disclaimer">Botón Rosa ofrece herramientas de bienestar y acompañamiento emocional. No reemplaza la atención médica, psicológica ni psiquiátrica profesional. Si atravesás una crisis, buscá ayuda profesional.</p>
+  </footer>
+
+</body>
+</html>

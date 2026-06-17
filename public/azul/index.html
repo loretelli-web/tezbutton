@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#3A6EA5">
+<title>Botón Azul — Para cuidadores de personas con TEA</title>
+<meta name="description" content="Una herramienta de regulación emocional inmediata para mamás, papás y cuidadores de personas con TEA. Para el colapso que llega cuando la crisis ya pasó.">
+<meta property="og:title" content="Botón Azul — Tu lugar seguro">
+<meta property="og:description" content="Regulación emocional inmediata para cuidadores de personas con TEA. 3 ejercicios gratis.">
+<meta property="og:image" content="https://tezbutton.com/logobotonazul.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body { font-family: 'Poppins', sans-serif; background: #F5F2EE; color: #2C2C2C; line-height: 1.6; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  /* HERO */
+  .hero { text-align: center; padding: 64px 24px 48px; background: linear-gradient(180deg, #EAF2FA 0%, #F5F2EE 100%); }
+  .hero-badge { display: inline-block; background: #D6E8F7; color: #1E4D7B; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 20px; letter-spacing: .05em; margin-bottom: 24px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 42px; line-height: 1.15; margin-bottom: 18px; }
+  .hero h1 em { font-style: italic; color: #3A6EA5; }
+  .hero-sub { font-size: 17px; font-weight: 300; color: #4A4A4A; max-width: 540px; margin: 0 auto 30px; }
+  .btn-primary { display: inline-block; background: #3A6EA5; color: white; text-decoration: none; padding: 16px 40px; border-radius: 14px; font-size: 16px; font-weight: 500; transition: background .2s; }
+  .btn-primary:hover { background: #1E4D7B; }
+  .hero-free { font-size: 13px; color: #5A7A95; margin-top: 14px; font-weight: 300; }
+
+  /* SECCIÓN */
+  section { padding: 56px 24px; }
+  .section-alt { background: #FAFAF8; }
+  h2 { font-family: 'Playfair Display', serif; font-size: 30px; text-align: center; margin-bottom: 16px; }
+  h2 em { font-style: italic; color: #3A6EA5; }
+  .lead { font-size: 16px; font-weight: 300; color: #4A4A4A; text-align: center; max-width: 600px; margin: 0 auto 14px; }
+
+  /* HISTORIA */
+  .historia { background: #FAFAF8; border-left: 3px solid #3A6EA5; padding: 28px 30px; border-radius: 12px; margin: 28px auto 0; max-width: 600px; }
+  .historia p { font-size: 16px; font-weight: 300; color: #3A3A3A; font-style: italic; margin-bottom: 12px; }
+  .historia p:last-child { margin-bottom: 0; }
+
+  /* PASOS */
+  .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; max-width: 640px; margin: 36px auto 0; }
+  .paso { text-align: center; }
+  .paso-num { width: 42px; height: 42px; border-radius: 50%; background: #3A6EA5; color: white; display: flex; align-items: center; justify-content: center; font-size: 17px; font-weight: 600; margin: 0 auto 14px; font-family: 'Playfair Display', serif; }
+  .paso h4 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+  .paso p { font-size: 13px; font-weight: 300; color: #5A5A5A; }
+
+  /* PARA QUIÉN */
+  .perfiles { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 600px; margin: 30px auto 0; }
+  .perfil { background: white; border: 1px solid #D6E8F7; border-radius: 14px; padding: 16px 20px; font-size: 14px; font-weight: 400; display: flex; align-items: center; gap: 10px; }
+  .perfil span { font-size: 20px; }
+
+  /* PRECIO */
+  .precio-card { background: white; border: 2px solid #3A6EA5; border-radius: 24px; padding: 40px 32px; max-width: 420px; margin: 0 auto; text-align: center; }
+  .precio-amount { font-size: 44px; font-weight: 600; color: #3A6EA5; font-family: 'Playfair Display', serif; }
+  .precio-amount span { font-size: 16px; font-weight: 300; color: #5A5A5A; }
+  .precio-free { background: #D6E8F7; color: #1E4D7B; font-size: 14px; font-weight: 500; padding: 10px 18px; border-radius: 12px; display: inline-block; margin: 18px 0 24px; }
+  .precio-list { list-style: none; text-align: left; margin-bottom: 28px; }
+  .precio-list li { font-size: 14px; font-weight: 300; color: #3A3A3A; padding: 8px 0; padding-left: 28px; position: relative; }
+  .precio-list li::before { content: "✓"; position: absolute; left: 0; color: #3A6EA5; font-weight: 600; }
+  .btn-pay { display: block; width: 100%; background: #3A6EA5; color: white; text-decoration: none; padding: 16px; border-radius: 14px; font-size: 16px; font-weight: 500; transition: background .2s; border: none; cursor: pointer; }
+  .btn-pay:hover { background: #1E4D7B; }
+  .precio-note { font-size: 12px; color: #999; margin-top: 14px; font-weight: 300; }
+
+  /* FOOTER */
+  footer { background: #2C2C2C; color: #BBB; text-align: center; padding: 36px 24px; font-size: 13px; font-weight: 300; margin-top: 20px; }
+  footer .fb { font-family: 'Playfair Display', serif; font-size: 18px; color: white; margin-bottom: 8px; }
+  footer a { color: #A9C7E5; text-decoration: none; }
+  .disclaimer { font-size: 11px; opacity: .55; max-width: 480px; margin: 14px auto 0; }
+
+  @media (max-width: 600px) { .hero h1 { font-size: 32px; } }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="container">
+      <span class="hero-badge">💙 Para cuidadores de personas con TEA</span>
+      <h1>Cuando la crisis pasó,<br><em>te toca a vos.</em></h1>
+      <p class="hero-sub">Botón Azul es como un botón de auxilio emocional: lo tocás cuando el cuerpo se desborda y necesitás algo concreto, ya. Pensado para mamás, papás y cuidadores. Para ese momento en que él ya se calmó, pero vos seguís temblando.</p>
+      <a href="https://boton-azul-3vwf.vercel.app" class="btn-primary" target="_blank">Probar ahora</a>
+      <p class="hero-free">3 ejercicios gratis · Sin instalar nada</p>
+    </div>
+  </div>
+
+  <!-- HISTORIA -->
+  <section>
+    <div class="container">
+      <h2>Una herramienta que <em>nació de una necesidad real</em></h2>
+      <p class="lead">Quien cuida a una persona con TEA vive una lucha silenciosa: el impulso de proteger al otro y la necesidad de protegerse a una misma, todo al mismo tiempo.</p>
+      <div class="historia">
+        <p>"Durante la crisis no podés parar. Actuás. Es puro instinto de supervivencia."</p>
+        <p>"Lo difícil viene después. Cuando todo se calmó y te quedás sola, con el cuerpo todavía temblando y sin que nadie te vea."</p>
+      </div>
+      <p class="lead" style="margin-top:28px;">Botón Azul existe para ese momento. El que nadie más atiende.</p>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Cómo funciona</h2>
+      <p class="lead">Simple, porque cuando estás al límite no tenés energía para nada complicado.</p>
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-num">1</div>
+          <h4>Contá qué pasa</h4>
+          <p>Escribí cómo te sentís o elegí entre las opciones.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">2</div>
+          <h4>Recibí tu ejercicio</h4>
+          <p>En menos de 3 minutos, algo concreto para hacer ahora.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">3</div>
+          <h4>Respirá</h4>
+          <p>Con música que acompaña, en tu espacio y tu tiempo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section>
+    <div class="container">
+      <h2>Pensado <em>para vos</em></h2>
+      <div class="perfiles">
+        <div class="perfil"><span>💙</span> Mamás y papás</div>
+        <div class="perfil"><span>🤍</span> Cuidadores familiares</div>
+        <div class="perfil"><span>📘</span> Docentes y acompañantes</div>
+        <div class="perfil"><span>🔵</span> Adultos autistas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIO -->
+  <section class="section-alt">
+    <div class="container">
+      <h2>Empezá hoy</h2>
+      <div class="precio-card">
+        <div class="precio-amount">USD 9,99<span>/mes</span></div>
+        <div class="precio-free">Probá con 3 ejercicios gratis</div>
+        <ul class="precio-list">
+          <li>Ejercicios ilimitados, cuando los necesites</li>
+          <li>Adaptados a tu situación específica</li>
+          <li>Música que acompaña cada pausa</li>
+          <li>Disponible en tu celular, sin instalar nada</li>
+          <li>Cancelás cuando quieras</li>
+        </ul>
+        <!-- BOTÓN DE PAGO: reemplazar el href cuando esté la pasarela -->
+        <a href="https://boton-azul-3vwf.vercel.app" class="btn-pay" target="_blank">Comenzar ahora</a>
+        <p class="precio-note">Probás gratis antes de pagar. Sin compromiso.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fb">Botón Azul</div>
+    <p>Parte de la familia TEZ Button · Método T.E.Z.®</p>
+    <p style="margin-top:8px;"><a href="https://tezbutton.com">tezbutton.com</a></p>
+    <p style="margin-top:14px; font-size:13px;">
+      <a href="https://tezbutton.com/terminos.html" style="color:#A9C7E5; margin:0 6px;">Términos y Condiciones</a> ·
+      <a href="https://tezbutton.com/privacidad.html" style="color:#A9C7E5; margin:0 6px;">Privacidad</a> ·
+      <a href="https://tezbutton.com/reembolsos.html" style="color:#A9C7E5; margin:0 6px;">Reembolsos</a>
+    </p>
+    <p class="disclaimer">Botón Azul ofrece herramientas de bienestar y autorregulación emocional. No reemplaza la atención médica, psicológica ni psiquiátrica profesional. Si atravesás una crisis, buscá ayuda profesional.</p>
+  </footer>
+
+</body>
+</html>
