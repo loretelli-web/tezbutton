@@ -20,8 +20,9 @@
   /* HERO */
   .hero { text-align: center; padding: 64px 24px 48px; background: linear-gradient(180deg, #EAF2FA 0%, #F5F2EE 100%); }
   .hero-badge { display: inline-block; background: #D6E8F7; color: #1E4D7B; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 20px; letter-spacing: .05em; margin-bottom: 24px; }
-  .hero h1 { font-family: 'Playfair Display', serif; font-size: 42px; line-height: 1.15; margin-bottom: 18px; }
-  .hero h1 em { font-style: italic; color: #3A6EA5; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: 52px; line-height: 1.1; margin-bottom: 10px; color: #1E4D7B; }
+  .hero-tagline { font-family: 'Playfair Display', serif; font-size: 24px; font-style: italic; color: #3A6EA5; margin-bottom: 20px; font-weight: 400; }
+  .hero-tagline em { font-style: italic; }
   .hero-sub { font-size: 17px; font-weight: 300; color: #4A4A4A; max-width: 540px; margin: 0 auto 30px; }
   .btn-primary { display: inline-block; background: #3A6EA5; color: white; text-decoration: none; padding: 16px 40px; border-radius: 14px; font-size: 16px; font-weight: 500; transition: background .2s; }
   .btn-primary:hover { background: #1E4D7B; }
@@ -38,6 +39,11 @@
   .historia { background: #FAFAF8; border-left: 3px solid #3A6EA5; padding: 28px 30px; border-radius: 12px; margin: 28px auto 0; max-width: 600px; }
   .historia p { font-size: 16px; font-weight: 300; color: #3A3A3A; font-style: italic; margin-bottom: 12px; }
   .historia p:last-child { margin-bottom: 0; }
+  .motivos { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 640px; margin: 32px auto 0; }
+  .motivo { background: #FAFAF8; border: 1px solid #D6E8F7; border-radius: 16px; padding: 24px 20px; text-align: center; }
+  .motivo-emoji { font-size: 28px; display: block; margin-bottom: 10px; }
+  .motivo h4 { font-family: 'Playfair Display', serif; font-size: 17px; color: #1E4D7B; margin-bottom: 8px; font-style: italic; }
+  .motivo p { font-size: 13px; font-weight: 300; color: #5A5A5A; line-height: 1.5; }
 
   /* PASOS */
   .pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; max-width: 640px; margin: 36px auto 0; }
@@ -77,9 +83,10 @@
   <!-- HERO -->
   <div class="hero">
     <div class="container">
-      <span class="hero-badge">💙 Para cuidadores de personas con TEA</span>
-      <h1>Cuando la crisis pasó,<br><em>te toca a vos.</em></h1>
-      <p class="hero-sub">Botón Azul es como un botón de auxilio emocional: lo tocás cuando el cuerpo se desborda y necesitás algo concreto, ya. Pensado para mamás, papás y cuidadores. Para ese momento en que él ya se calmó, pero vos seguís temblando.</p>
+      <span class="hero-badge">💙 Para cuidadores y personas con TEA</span>
+      <h1>Botón Azul</h1>
+      <p class="hero-tagline">Para ese momento en que <em>necesitás parar.</em></p>
+      <p class="hero-sub">Acompañar a una persona con TEA te pide todo, todo el tiempo. Botón Azul es el lugar donde frenás un momento y volvés a tu eje: en pocos minutos, un ejercicio simple para sostener lo que estás viviendo.</p>
       <a href="https://boton-azul-3vwf.vercel.app" class="btn-primary" target="_blank">Probar ahora</a>
       <p class="hero-free">3 ejercicios gratis · Sin instalar nada</p>
     </div>
@@ -88,13 +95,25 @@
   <!-- HISTORIA -->
   <section>
     <div class="container">
-      <h2>Una herramienta que <em>nació de una necesidad real</em></h2>
-      <p class="lead">Quien cuida a una persona con TEA vive una lucha silenciosa: el impulso de proteger al otro y la necesidad de protegerse a una misma, todo al mismo tiempo.</p>
-      <div class="historia">
-        <p>"Durante la crisis no podés parar. Actuás. Es puro instinto de supervivencia."</p>
-        <p>"Lo difícil viene después. Cuando todo se calmó y te quedás sola, con el cuerpo todavía temblando y sin que nadie te vea."</p>
+      <h2>Quizás te identifiques <em>con alguna de estas</em></h2>
+      <p class="lead">No hay una sola forma de vivir esto. Botón Azul te acompaña en todas.</p>
+      <div class="motivos">
+        <div class="motivo">
+          <span class="motivo-emoji">🌙</span>
+          <h4>La alerta que no se apaga</h4>
+          <p>Vivís atento/a a todo, incluso en los días tranquilos. Tu cuerpo aprendió a no bajar la guardia, y eso cansa de un modo que pocos entienden.</p>
+        </div>
+        <div class="motivo">
+          <span class="motivo-emoji">🌀</span>
+          <h4>El temblor de después</h4>
+          <p>Pasó un momento difícil, todo volvió a la calma, pero por dentro seguís con la tensión encima. Y casi siempre lo atravesás en soledad.</p>
+        </div>
+        <div class="motivo">
+          <span class="motivo-emoji">🤍</span>
+          <h4>Tu espacio también importa</h4>
+          <p>Cuidás, sostenés, resolvés. Botón Azul es ese momento del día que reservás para vos, sin culpa.</p>
+        </div>
       </div>
-      <p class="lead" style="margin-top:28px;">Botón Azul existe para ese momento. El que nadie más atiende.</p>
     </div>
   </section>
 
@@ -141,7 +160,8 @@
     <div class="container">
       <h2>Empezá hoy</h2>
       <div class="precio-card">
-        <div class="precio-amount">USD 9,99<span>/mes</span></div>
+        <div class="precio-amount">USD 7,99<span>/mes</span></div>
+        <div style="font-size:14px;color:#3A6EA5;font-weight:600;margin-top:4px;">✨ Precio de lanzamiento</div>
         <div class="precio-free">Probá con 3 ejercicios gratis</div>
         <ul class="precio-list">
           <li>Ejercicios ilimitados, cuando los necesites</li>
@@ -151,8 +171,8 @@
           <li>Cancelás cuando quieras</li>
         </ul>
         <!-- BOTÓN DE PAGO: reemplazar el href cuando esté la pasarela -->
-        <a href="https://boton-azul-3vwf.vercel.app" class="btn-pay" target="_blank">Comenzar ahora</a>
-        <p class="precio-note">Probás gratis antes de pagar. Sin compromiso.</p>
+        <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=11396624d8aa418b959200809efe0b43" class="btn-pay" target="_blank">Suscribirme · 5 días gratis</a>
+        <p class="precio-note">Además, 5 días de prueba gratis al suscribirte. Cancelás cuando quieras.</p>
       </div>
     </div>
   </section>
